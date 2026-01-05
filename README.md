@@ -36,6 +36,4 @@ This project is designed for **batch archiving, offline use, and automation**, w
 - **SteamCMD**
 - **Steam account**
 
-### Python Dependencies
-Create a file called `requirements.txt` with:
 
