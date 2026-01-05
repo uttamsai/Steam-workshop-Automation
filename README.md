@@ -1,23 +1,41 @@
-# Steam-workshop-Automation# Steam Workshop Automation
+# Steam Workshop Automation
 
-This project includes tools to scrape Steam Workshop item IDs and download them using SteamCMD.
+A set of Python tools to **scrape Steam Workshop mod IDs** and **automatically download mods using SteamCMD**.
+
+This project is designed for **batch archiving, offline use, and automation**, with support for large Workshop collections.
+
+---
 
 ## Features
 
-- Scrape Steam Workshop pages for mod IDs
-- Save mod IDs to organized folders
-- Automate downloading mods via SteamCMD
-- Handles existing downloads and skips duplicates
+- Scrape Steam Workshop listing pages for mod IDs  
+- Supports public and cookie-authenticated pages  
+- Automatically detects AppID and game name  
+- Organizes output by game and AppID  
+- Archives previous runs automatically  
+- Downloads mods via SteamCMD  
+- Skips already installed and up-to-date mods  
+- Detects failed or empty downloads  
 
-## How to Use
+---
 
-1. Run `steamworkshop_id_downloader.py`
-2. Enter a Steam Workshop page URL
-3. IDs are saved into `0 - output/<Game - AppID>`
-4. Run `steamcmd_automation.py` to download with SteamCMD
+## Project Files
+
+- `steamworkshop id downloader.py`  
+  Scrapes Workshop listing pages and generates organized ID lists.
+
+- `steamcmd automation.py`  
+  Uses SteamCMD to download Workshop items in bulk from ID lists.
+
+---
 
 ## Requirements
 
-- Python 3.10 or later
-- `requests` library
-- SteamCMD installed and visible in PATH
+### Software
+- **Python 3.10+**
+- **SteamCMD**
+- **Steam account**
+
+### Python Dependencies
+Create a file called `requirements.txt` with:
+
